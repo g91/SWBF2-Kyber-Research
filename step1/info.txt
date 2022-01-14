@@ -1,0 +1,9 @@
+https://kyber.gg/api/hashes/distributions/stable/dll 
+3f12d7f6f99d5547ee1bf6fda8826fb1e92aa59b1d42d2aa26722d46210e2869
+
+https://kyber.gg/api/version/launcher
+1.0.8
+
+https://kyber.gg/api/hashes/distributions/stable/3f12d7f6f99d5547ee1bf6fda8826fb1e92aa59b1d42d2aa26722d46210e2869/dll
+
+https://kyber.gg/api/hashes/distributions/stable/dll

@@ -1,0 +1,8 @@
+C:\Users\theru\OneDrive\Desktop\Kyber\code\KyberClient\obj\x64\Debug\KyberClient.csproj.AssemblyReference.cache
+C:\Users\theru\OneDrive\Desktop\Kyber\code\KyberClient\obj\x64\Debug\KyberClient.csproj.SuggestedBindingRedirects.cache
+C:\Users\theru\OneDrive\Desktop\Kyber\code\KyberClient\obj\x64\Debug\MainWindow.g.cs
+C:\Users\theru\OneDrive\Desktop\Kyber\code\KyberClient\obj\x64\Debug\SettingsWindow.g.cs
+C:\Users\theru\OneDrive\Desktop\Kyber\code\KyberClient\obj\x64\Debug\Themes\DarkTheme.g.cs
+C:\Users\theru\OneDrive\Desktop\Kyber\code\KyberClient\obj\x64\Debug\App.g.cs
+C:\Users\theru\OneDrive\Desktop\Kyber\code\KyberClient\obj\x64\Debug\KyberClient_MarkupCompile.cache
+C:\Users\theru\OneDrive\Desktop\Kyber\code\KyberClient\obj\x64\Debug\KyberClient_MarkupCompile.lref

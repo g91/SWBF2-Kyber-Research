@@ -1,0 +1,104 @@
+<Window
+	x:Class="KyberClient.SettingsWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:KyberClient" xmlns:p="clr-namespace:KyberClient.Properties"
+	ResizeMode="NoResize"
+	Height="222"
+	Width="500"
+	WindowStartupLocation="CenterScreen"
+	Title="KYBER: SETTINGS"
+	Style="{DynamicResource CustomWindowStyle}"
+	MouseDown="window_MouseDown">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<DropShadowBitmapEffect
+				ShadowDepth="2"
+				Softness="0.2"
+				Opacity="0.64"
+				x:Key="NormalShadow" />
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid>
+		<Panel.Background>
+			<ImageBrush
+				ImageSource="Resources/kyber_bg.png"
+				Stretch="UniformToFill"
+				Viewport="0,-0.25,1,1.25" />
+		</Panel.Background>
+		<Grid>
+			<Panel.Background>
+				<LinearGradientBrush
+					EndPoint="0.5,1"
+					MappingMode="RelativeToBoundingBox"
+					StartPoint="0.5,0.025">
+					<GradientStop
+						Color="#ff000000" />
+					<GradientStop
+						Color="#99000000"
+						Offset="0.4" />
+				</LinearGradientBrush>
+			</Panel.Background>
+			<TextBox
+				Name="DLLChannel"
+				HorizontalAlignment="Center"
+				Height="30"
+				Margin="26,97,26,0"
+				TextWrapping="Wrap"
+				VerticalAlignment="Top"
+				Width="440"
+				VerticalContentAlignment="Center"
+				FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT"
+				FontSize="15"
+				Text="{Binding Source={x:Static p:Settings.Default}, Path=DLLchannel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+				TextChanged="DLLChannel_TextChanged" />
+			<TextBlock
+				HorizontalAlignment="Center"
+				Margin="26,70,26,0"
+				Text="RELEASE CHANNEL"
+				VerticalAlignment="Top"
+				FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"
+				FontSize="18"
+				TextAlignment="Left"
+				Width="440" />
+			<Button
+				Content="Reset Settings"
+				HorizontalAlignment="Center"
+				Margin="26,145,342,0"
+				VerticalAlignment="Top"
+				Width="124"
+				FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT"
+				FontSize="15"
+				Height="40"
+				Click="Reset_Settings" />
+			<Button
+				Content="WinDef Exclusion"
+				HorizontalAlignment="Center"
+				Margin="155,145,197,0"
+				VerticalAlignment="Top"
+				Width="140"
+				FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT"
+				FontSize="15"
+				Height="40"
+				Click="Defender_DLL" />
+			<Button
+				Content="Re-download DLL"
+				HorizontalAlignment="Center"
+				Margin="300,145,26,0"
+				VerticalAlignment="Top"
+				Width="166"
+				FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT"
+				FontSize="15"
+				Height="40"
+				Click="Reload_Click" />
+			<TextBlock
+				Name="txt_Version"
+				HorizontalAlignment="Center"
+				Margin="47,200,5,0"
+				Text="v"
+				VerticalAlignment="Top"
+				FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"
+				FontSize="14"
+				TextAlignment="Right"
+				Width="440"
+				Foreground="#28FFFFFF" />
+		</Grid>
+	</Grid>
+</Window>

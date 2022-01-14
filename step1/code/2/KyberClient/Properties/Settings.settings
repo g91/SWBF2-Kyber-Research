@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="KyberClient.Properties" GeneratedClassName="Settings" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DLLchannel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">stable</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

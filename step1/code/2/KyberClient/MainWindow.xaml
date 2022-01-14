@@ -1,0 +1,204 @@
+<Window
+	x:Class="KyberClient.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:KyberClient"
+	Title="KYBER"
+	MinHeight="440"
+	MinWidth="600"
+	Height="440"
+	Width="600"
+	WindowStartupLocation="CenterScreen"
+	Style="{DynamicResource CustomWindowStyle}"
+	ResizeMode="CanMinimize"
+	MouseDown="window_MouseDown">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<DropShadowBitmapEffect
+				ShadowDepth="2"
+				Softness="0.2"
+				Opacity="0.64"
+				x:Key="NormalShadow" />
+			<Storyboard
+				TargetName="loadingImage"
+				TargetProperty="RenderTransform.(RotateTransform.Angle)"
+				x:Key="imageRotationStoryboard">
+				<DoubleAnimation
+					From="0"
+					To="360"
+					BeginTime="0:0:0"
+					Duration="0:0:1.5"
+					RepeatBehavior="Forever" />
+			</Storyboard>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid>
+		<Panel.Background>
+			<ImageBrush
+				ImageSource="Resources/kyber_bg.png"
+				Stretch="UniformToFill"
+				Viewport="0,-0.03,1,1.03" />
+		</Panel.Background>
+		<Grid>
+			<Panel.Background>
+				<LinearGradientBrush
+					EndPoint="0.5,1"
+					MappingMode="RelativeToBoundingBox"
+					StartPoint="0.5,0.025">
+					<GradientStop
+						Color="#ff000000" />
+					<GradientStop
+						Color="#00000000"
+						Offset="0.4" />
+				</LinearGradientBrush>
+			</Panel.Background>
+			<Button
+				Content="CONFIGURE AT KYBER.GG"
+				FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"
+				FontSize="22"
+				HorizontalAlignment="Center"
+				Margin="161,330,161,25"
+				VerticalAlignment="Center"
+				Width="270"
+				Height="54"
+				Click="Button_Click" />
+			<TextBlock
+				HorizontalAlignment="Center"
+				Margin="156,120,156,0"
+				Text="KYBER CLIENT"
+				VerticalAlignment="Top"
+				FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"
+				FontSize="48"
+				TextAlignment="Center"
+				Width="280" />
+			<Grid
+				Name="NotInjected"
+				Margin="120,185,120,0"
+				Visibility="Visible"
+				VerticalAlignment="Top"
+				HorizontalAlignment="Center">
+				<TextBlock
+					Name="Description"
+					Margin="37,9,0,0"
+					Text="Waiting for STAR WARS Battlefront II to open"
+					VerticalAlignment="Top"
+					FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT"
+					FontSize="15"
+					Foreground="#FFA3A3A3"
+					TextAlignment="Center" />
+				<Image
+					Name="loadingImage"
+					Margin="1,3,91,0"
+					RenderTransformOrigin="0.5,0.5"
+					Width="28"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Top">
+					<Image.Source>
+						<DrawingImage>
+							<DrawingImage.Drawing>
+								<DrawingGroup
+									ClipGeometry="M0,0 L0,100 L100,100 L100,0 L0,0">
+									<GeometryDrawing>
+										<GeometryDrawing.Pen>
+											<Pen
+												Brush="#FFA3A3A3"
+												Thickness="8"
+												StartLineCap="Flat"
+												EndLineCap="Flat"
+												DashCap="Flat"
+												LineJoin="Miter">
+												<Pen.DashStyle>
+													<DashStyle
+														Offset="0"
+														Dashes="16.4933614313464 5.69778714378214" />
+												</Pen.DashStyle>
+											</Pen>
+										</GeometryDrawing.Pen>
+										<GeometryDrawing.Geometry>
+											<EllipseGeometry
+												RadiusX="35"
+												RadiusY="35"
+												Center="50,50" />
+										</GeometryDrawing.Geometry>
+									</GeometryDrawing>
+								</DrawingGroup>
+							</DrawingImage.Drawing>
+						</DrawingImage>
+					</Image.Source>
+					<FrameworkElement.Triggers>
+						<EventTrigger
+							RoutedEvent="FrameworkElement.Loaded">
+							<BeginStoryboard
+								Storyboard="{StaticResource imageRotationStoryboard}" />
+						</EventTrigger>
+					</FrameworkElement.Triggers>
+					<UIElement.RenderTransform>
+						<RotateTransform
+							Angle="0" />
+					</UIElement.RenderTransform>
+				</Image>
+			</Grid>
+			<Grid
+				Name="Injected"
+				Margin="236,185,236,0"
+				Visibility="Hidden"
+				VerticalAlignment="Top"
+				HorizontalAlignment="Center">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="75*" />
+					<ColumnDefinition
+						Width="14*" />
+				</Grid.ColumnDefinitions>
+				<TextBlock
+					Margin="32,9,2,0"
+					Text="Injected"
+					VerticalAlignment="Top"
+					FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT"
+					FontSize="15"
+					Foreground="#FFA3A3A3"
+					TextAlignment="Center"
+					Grid.ColumnSpan="2" />
+				<Image
+					Name="loadedImage"
+					Margin="4,5,48,0"
+					RenderTransformOrigin="0.5,0.5"
+					Width="24"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Top">
+					<Image.Source>
+						<DrawingImage>
+							<DrawingImage.Drawing>
+								<DrawingGroup
+									ClipGeometry="M0,0 L0,24 L24,24 L24,0 L0,0">
+									<GeometryDrawing
+										Brush="#FFA3A3A3"
+										Geometry="F1 M24,24 M0,0 M9,21.035 L0,12.397 L2.791,9.527 L8.947,15.401 L21.157,2.965 L24,5.782" />
+								</DrawingGroup>
+							</DrawingImage.Drawing>
+						</DrawingImage>
+					</Image.Source>
+				</Image>
+			</Grid>
+			<TextBlock
+				Name="txt_Version"
+				HorizontalAlignment="Right"
+				Margin="0,0,12,10.5"
+				Text="v1.0.0"
+				VerticalAlignment="Bottom"
+				FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"
+				FontSize="14"
+				TextAlignment="Center"
+				Width="36"
+				Foreground="#10FFFFFF"
+				RenderTransformOrigin="0.5,0.5">
+				<UIElement.RenderTransform>
+					<TransformGroup>
+						<ScaleTransform />
+						<SkewTransform />
+						<RotateTransform
+							Angle="6" />
+						<TranslateTransform />
+					</TransformGroup>
+				</UIElement.RenderTransform>
+			</TextBlock>
+		</Grid>
+	</Grid>
+</Window>

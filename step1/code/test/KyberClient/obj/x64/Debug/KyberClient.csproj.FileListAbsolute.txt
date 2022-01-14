@@ -1,0 +1,13 @@
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\KyberClient.csproj.AssemblyReference.cache
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\KyberClient.csproj.SuggestedBindingRedirects.cache
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\MainWindow.g.cs
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\SettingsWindow.g.cs
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\Themes\DarkTheme.g.cs
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\App.g.cs
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\KyberClient_MarkupCompile.cache
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\KyberClient_MarkupCompile.lref
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\App.baml
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\MainWindow.baml
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\SettingsWindow.baml
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\KyberClient.exe
+C:\Users\theru\OneDrive\Desktop\Kyber\code\test\KyberClient\obj\x64\Debug\KyberClient.pdb
